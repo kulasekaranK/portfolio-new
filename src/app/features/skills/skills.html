@@ -1,0 +1,20 @@
+<div
+  class="cursor-wrapper pointer-events-none fixed z-[9999] transition-transform duration-100 ease-out"
+  [ngStyle]="{
+    transform: 'translate(' + (x() - 16) + 'px, ' + (y() - 16) + 'px)'
+  }"
+>
+  <!-- Outer Ring -->
+  <div
+    class="cursor-ring w-8 h-8 rounded-full border border-emerald-400 opacity-80 transition-all duration-300 mix-blend-difference"
+    [class.hovering]="isHovering()"
+    [class.clicking]="isClicking()"
+  ></div>
+
+  <!-- Inner Dot -->
+  <div
+    class="cursor-dot w-2.5 h-2.5 bg-emerald-400 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-150"
+    [class.scale-up]="isHovering()"
+    [class.pulse]="isClicking()"
+  ></div>
+</div>

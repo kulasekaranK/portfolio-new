@@ -1,0 +1,27 @@
+<section class="min-h-screen bg-black text-white p-6">
+  <app-section-header title="Projects"></app-section-header>
+
+  <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    @for(project of this.projects(); track project) {
+      <div class="bg-gray-900 rounded-lg p-5 shadow-md hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">{{ project.title }}</h3>
+        <p class="text-sm text-gray-400 mb-3">{{ project.description }}</p>
+
+        <div class="flex flex-wrap gap-2">
+          @for(tech of project.techStack; track tech) {
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded">{{ tech }}</span>
+          }
+        </div>
+
+        <div class="mt-4 flex gap-3 text-sm">
+          @if(project.liveUrl) {
+            <a [href]="project.liveUrl" target="_blank" class="text-teal-400 hover:underline">Live</a>
+          }
+          @if(project.repoUrl) {
+            <a [href]="project.repoUrl" target="_blank" class="text-blue-400 hover:underline">Code</a>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>
