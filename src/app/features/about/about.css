@@ -1,0 +1,185 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay.delay-100 {
+  animation-delay: 0.2s;
+}
+.fade-in-delay.delay-200 {
+  animation-delay: 0.4s;
+}
+.fade-in-delay.delay-300 {
+  animation-delay: 0.6s;
+}
+
+
+   /* Black background */
+        .timeline-bg {
+            background-color: #000000;
+            min-height: 100vh;
+        }
+
+        /* Fade in animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Timeline line animation */
+        @keyframes growLine {
+            from {
+                height: 0;
+            }
+            to {
+                height: 100%;
+            }
+        }
+
+        /* Subtle pulse for timeline dots */
+        @keyframes subtlePulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+        }
+
+        /* Slide in animation for cards */
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Text typing effect */
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Apply animations */
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-left {
+            opacity: 0;
+            animation: fadeInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-scale {
+            opacity: 0;
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+
+        .animate-grow-line {
+            height: 0;
+            animation: growLine 2.5s ease-out forwards;
+        }
+
+        .animate-subtle-pulse {
+            animation: subtlePulse 3s ease-in-out infinite;
+        }
+
+        .animate-slide-in-right {
+            opacity: 0;
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        /* Timeline line styling */
+        .timeline-line {
+            background: linear-gradient(to bottom, #ffffff, #6b7280, #374151);
+            width: 2px;
+        }
+
+        /* Card hover effects */
+        .timeline-card {
+            /* background-color: #111111; */
+            border: 1px solid #3333331f;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            border-color: #4b556344;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+
+        /* Status badges */
+        .status-current { background-color: #ffffff; color: #000000; }
+        .status-promotion { background-color: #6b7280; color: #ffffff; }
+        .status-training { background-color: #374151; color: #ffffff; }
+        .status-education { background-color: #4b5563; color: #ffffff; }
+
+        /* Timeline dots */
+        .dot-current { background-color: #ffffff; padding: 8px; }
+        .dot-promotion { background-color: #d1d5db;  padding: 8px; }
+        .dot-training { background-color: #9ca3af;  padding: 8px; }
+        .dot-education { background-color: #6b7280;  padding: 8px; }

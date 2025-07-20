@@ -34,4 +34,6 @@ export class Contact {
     this.message.set('');
     this.submitted.set(true);
   }
+
+  
 }
