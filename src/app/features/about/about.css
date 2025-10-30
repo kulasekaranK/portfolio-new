@@ -1,4 +1,15 @@
 @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#timeline .relative:nth-child(1) { animation: fadeIn 0.6s ease-out; }
+#timeline .relative:nth-child(2) { animation: fadeIn 0.6s ease-out 0.2s forwards; }
+#timeline .relative:nth-child(3) { animation: fadeIn 0.6s ease-out 0.4s forwards; }
+#timeline .relative:nth-child(4) { animation: fadeIn 0.6s ease-out 0.6s forwards; }
+
+
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -183,3 +194,5 @@
         .dot-promotion { background-color: #d1d5db;  padding: 8px; }
         .dot-training { background-color: #9ca3af;  padding: 8px; }
         .dot-education { background-color: #6b7280;  padding: 8px; }
+
+
