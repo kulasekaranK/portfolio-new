@@ -1,20 +1,31 @@
+<!-- HTML Template -->
 <div
-  class="pointer-events-none fixed z-[9999] transition-transform duration-100 ease-out  hidden lg:block"
+  class="pointer-events-none fixed z-[9999] transition-transform duration-75 ease-out hidden lg:block"
   [ngStyle]="{
-    transform: 'translate(' + (x() - 16) + 'px, ' + (y() - 16) + 'px)'
+    transform: 'translate(' + (x() - 24) + 'px, ' + (y() - 24) + 'px)'
   }"
 >
-  <!-- Outer Glow Ring -->
+  <!-- Outer Glow Ring with Shadow -->
   <div
-    class="cursor-ring w-10 h-10 rounded-full border border-white opacity-60 blur-[1.5px] transition-all duration-300"
+    class="cursor-ring w-12 h-12 rounded-full transition-all duration-300 ease-out"
     [class.hovering]="isHovering()"
     [class.clicking]="isClicking()"
   ></div>
-
+  
+  <!-- Middle Ring -->
+  <div
+    class="cursor-middle w-8 h- 8 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-200"
+    [class.hovering]="isHovering()"
+    [class.clicking]="isClicking()"
+  ></div>
+  
   <!-- Inner Dot -->
   <div
-    class="cursor-dot w-3.5 h-3.5 bg-white rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"
-    [class.scale-up]="isHovering()"
-    [class.pulse]="isClicking()"
+    class="cursor-dot w-2 h-2 bg-gradient-to-br from-white to-gray-300 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-150"
+    [class.hovering]="isHovering()"
+    [class.clicking]="isClicking()"
   ></div>
+  
+  <!-- Trailing particles effect -->
+  <div class="cursor-trail absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 </div>
