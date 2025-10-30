@@ -1,10 +1,9 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { Navbar } from "../../shared/ui/navbar/navbar";
 import { animate, stagger } from 'animejs';
 
 @Component({
   selector: 'app-home',
-  imports: [Navbar],
+  imports: [],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -19,7 +18,6 @@ export class Home {
   @ViewChild('fogText', { static: true }) fogText!: ElementRef;
 
   ngAfterViewInit() {
-    // 🎬 Animate content on entrance
     animate('.animate-fade-in', {
       opacity: [0, 1],
       translateY: [60, 0],
