@@ -1,3 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+ * {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+  }
+
+  input, textarea, select {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+  }
 
